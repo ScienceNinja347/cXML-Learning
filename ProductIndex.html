@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display XML Data</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h2>Wurth Example Cart</h2>
+    <p>This is an example table showing avaliable example products</p>
+    <table id="products-table">
+        <thead>
+            <tr>
+                <th>Supplier Part ID</th>
+                <th>Auxiliary ID</th>
+                <th>Manufacturer Part ID</th>
+                <th>Manufacturer Name</th>
+                <th>Description</th>
+                <th>Unit Price</th>
+                <th>Currency</th>
+                <th>Unit of Measure</th>
+                <th>Classification</th>
+            </tr>
+        </thead>
+        <tbody id="products-tbody">
+            <!-- Product rows will be added here later-->
+        </tbody>
+    </table>
+
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button id="checkout-button">Checkout</div>
+    </div>
+    
+    <div id="cart">
+        <ul id="cart-items">
+            <!-- Cart items will be added here -->
+        </ul>
+        <p>Total: $<span id="total">0.00</span></p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('products.xml')
+                .then(response => response.text())
+                .then(data => {
+                    let parser = new DOMParser();
+                    let xml = parser.parseFromString(data, "application/xml");
+                    let items = xml.getElementsByTagName("ItemOut");
+                    let tableBody = document.getElementById("products-tbody");
+                    
+                    for (let i = 0; i < items.length; i++) 
+                    {
+                        let currItem = items[i];
+                        let itemID = currItem.getElementsByTagName("ItemID")[0];
+                        let itemDetail = currItem.getElementsByTagName("ItemDetail")[0];
+
+                        let row = tableBody.insertRow();
+                        let supplierPartID = row.insertCell(0);
+                        let supplierPartAuxiliaryID = row.insertCell(1);
+                        let manufacturerPartID = row.insertCell(2);
+                        let manufacturerName = row.insertCell(3);
+                        let description = row.insertCell(4);
+                        let unitPrice = row.insertCell(5);
+                        let currency = row.insertCell(6);
+                        let unitOfMeasure = row.insertCell(7);
+                        let classification = row.insertCell(8);
+
+                        let actionCell = row.insertCell(9);
+                        let removeCell = row.insertCell(10);
+
+                        // Correct variable names and element access
+                        supplierPartID.textContent = itemID.getElementsByTagName("SupplierPartID")[0].textContent;
+                        supplierPartAuxiliaryID.textContent = itemID.getElementsByTagName("SupplierPartAuxiliaryID")[0].textContent;
+                        manufacturerPartID.textContent = itemDetail.getElementsByTagName("ManufacturerPartID")[0].textContent;
+                        manufacturerName.textContent = itemDetail.getElementsByTagName("ManufacturerName")[0].textContent;
+                        description.textContent = itemDetail.getElementsByTagName("Description")[0].textContent;
+                        unitPrice.textContent = itemDetail.getElementsByTagName("UnitPrice")[0].textContent;
+                        currency.textContent = itemDetail.getElementsByTagName("Currency")[0].textContent;
+                        unitOfMeasure.textContent = itemDetail.getElementsByTagName("UnitOfMeasure")[0].textContent;
+                        classification.textContent = itemDetail.getElementsByTagName("Classification")[0].textContent;
+                        
+                        let title = supplierPartID.textContent;
+                        let price = parseFloat(itemDetail.getElementsByTagName("UnitPrice")[0].textContent);
+                        
+                        let button = document.createElement("button");
+                        button.textContent = "Add to Cart";
+                        button.addEventListener("click", function() {
+                            addToCart(supplierPartID.textContent, price);
+                        });
+                        actionCell.appendChild(button);
+
+                        let removeButton = document.createElement("button");
+                        removeButton.textContent = "Remove From Cart";
+                        removeButton.addEventListener("click", function() {
+                            console.log("Remove button clicked for: ", supplierPartID.textContent);
+                            removeFromCart(title, price);
+                        });
+                        removeCell.appendChild(removeButton);
+                    }
+                    //makes the checkout button listen for a click event and adds a function to it
+                    let checkoutButton = document.getElementById("checkout-button");
+                    checkoutButton.addEventListener("click", function() {
+                        WriteToShoppingCart();
+                    });
+
+                })
+                .catch(error => {
+                    console.error("Error fetching the XML file:", error);
+                });
+        
+        });
+        let cart = [];
+        function addToCart(title, price) 
+        {
+            cart.push({ title, price });
+            updateCart();
+        }
+        function updateCart() 
+        {
+            // Aggregate items by title and price
+            const itemMap = new Map();
+
+            cart.forEach(item => {
+                const itemKey = `${item.title}-${item.price}`;
+                if (itemMap.has(itemKey)) 
+                {
+                    itemMap.get(itemKey).quantity += 1;
+                } 
+                else 
+                {
+                    itemMap.set(itemKey, { ...item, quantity: 1 });
+                }
+            });
+
+            // Update the cart with aggregated items
+            let cartItems = document.getElementById("cart-items");
+            cartItems.innerHTML = "";
+            let total = 0;
+
+            itemMap.forEach(item => {
+                let listItem = document.createElement("li");
+                listItem.textContent = `${item.title} - $${item.price.toFixed(2)} | Quantity: ${item.quantity}`;
+                cartItems.appendChild(listItem);
+                total += item.price * item.quantity;
+            });
+
+            document.getElementById("total").textContent = total.toFixed(2);
+            return;
+        }
+        
+        function removeFromCart(title, price) 
+        {
+            if (cart.length === 0) 
+            {
+                updateCart();
+                return;
+            }
+            console.log(`Removing ${title} with price ${price}`);
+            if (cart.length === 0) 
+            {
+                updateCart();
+                return;
+            }
+        
+            for (let i = 0; i < cart.length; i++) 
+            {
+                if (cart[i].title === title && cart[i].price === price) 
+                {
+                    cart.splice(i, 1); // Remove the item at index i
+                    break; // Exit the loop once the item is found and removed
+                }
+            }
+            updateCart();
+        }
+
+        function WriteToShoppingCart()
+        {
+            // Convert the array to a string (e.g., JSON format)
+            let content = cart.map(item => `${item.title} - $${item.price.toFixed(2)}`).join("\n");
+
+            // Create a Blob object with the content
+            let blob = new Blob([content], { type: "text/plain" });
+
+            // Create an anchor element and set the href attribute to the blob URL
+            let link = document.createElement("a");
+            link.href = URL.createObjectURL(blob);
+            link.download = "cart.txt"; // Set the file name
+
+            // Append the link to the body and trigger the download
+            document.body.appendChild(link);
+            link.click();
+
+            // Clean up and remove the link
+            document.body.removeChild(link);
+        }   
+        
+    </script>
+</body>
+</html>

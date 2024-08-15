@@ -1,0 +1,307 @@
+<?xml version="1.0" ?>
+<cXML version="1.2.008" xml:lang="en-US">
+    <Request>
+        <Catalog>
+            <ItemOut quantity="1" lineNumber="1">
+                <ItemID>
+                    <SupplierPartID>SP121</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA198</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>50.00</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Sample Product 1</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>12345678</Classification>
+                    <ManufacturerPartID>MPID1001</ManufacturerPartID>
+                    <ManufacturerName>Sample Manufacturer</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="2">
+                <ItemID>
+                    <SupplierPartID>SP523</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA151</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>1.10</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Screws</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>112233445</Classification>
+                    <ManufacturerPartID>MPID0001</ManufacturerPartID>
+                    <ManufacturerName>Machine Man Co.</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="3">
+                <ItemID>
+                    <SupplierPartID>SP001</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA001</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>199.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>High-quality electronic gadget</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Electronics</Classification>
+                    <ManufacturerPartID>MPID001</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerOne</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="4">
+                <ItemID>
+                    <SupplierPartID>SP002</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA002</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>1300.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Latest model of electronic device</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Electronics</Classification>
+                    <ManufacturerPartID>MPID002</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerOne</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="5">
+                <ItemID>
+                    <SupplierPartID>SP003</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA003</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>89.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Comfortable home chair</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>HomeGoods</Classification>
+                    <ManufacturerPartID>MPID003</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerTwo</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="6">
+                <ItemID>
+                    <SupplierPartID>SP004</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA004</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>69.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Stylish table lamp</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>HomeGoods</Classification>
+                    <ManufacturerPartID>MPID004</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerTwo</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="7">
+                <ItemID>
+                    <SupplierPartID>SP005</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA005</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>899.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Energy-efficient refrigerator</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Appliances</Classification>
+                    <ManufacturerPartID>MPID005</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerThree</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="8">
+                <ItemID>
+                    <SupplierPartID>SP006</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA006</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>499.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Top-load washing machine</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Appliances</Classification>
+                    <ManufacturerPartID>MPID006</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerThree</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="9">
+                <ItemID>
+                    <SupplierPartID>SP007</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA007</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>29.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Leather wallet</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Accessories</Classification>
+                    <ManufacturerPartID>MPID007</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerFour</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="10">
+                <ItemID>
+                    <SupplierPartID>SP008</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA008</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>179.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Stainless steel watch</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Accessories</Classification>
+                    <ManufacturerPartID>MPID008</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerFour</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="11">
+                <ItemID>
+                    <SupplierPartID>SP009</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA009</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>129.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Ergonomic office chair</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Furniture</Classification>
+                    <ManufacturerPartID>MPID009</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerFive</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="12">
+                <ItemID>
+                    <SupplierPartID>SP010</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA010</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>1099.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Modern dining table</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Furniture</Classification>
+                    <ManufacturerPartID>MPID010</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerFive</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="13">
+                <ItemID>
+                    <SupplierPartID>SP011</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA011</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>129.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Ceramic kitchen set</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Kitchenware</Classification>
+                    <ManufacturerPartID>MPID011</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerSix</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="14">
+                <ItemID>
+                    <SupplierPartID>SP012</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA012</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>19.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Stainless steel utensils</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Kitchenware</Classification>
+                    <ManufacturerPartID>MPID012</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerSix</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="15">
+                <ItemID>
+                    <SupplierPartID>SP013</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA013</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>79.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Adjustable dumbbells</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Sports</Classification>
+                    <ManufacturerPartID>MPID013</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerSeven</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="16">
+                <ItemID>
+                    <SupplierPartID>SP014</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA014</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>19.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Yoga mat</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Sports</Classification>
+                    <ManufacturerPartID>MPID014</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerSeven</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="17">
+                <ItemID>
+                    <SupplierPartID>SP015</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA015</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>89.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Outdoor hammock</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Outdoor</Classification>
+                    <ManufacturerPartID>MPID015</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerEight</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="18">
+                <ItemID>
+                    <SupplierPartID>SP016</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA016</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>119.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Portable grill</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Outdoor</Classification>
+                    <ManufacturerPartID>MPID016</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerEight</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="19">
+                <ItemID>
+                    <SupplierPartID>SP017</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA017</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>39.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Remote-controlled car</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Toys</Classification>
+                    <ManufacturerPartID>MPID017</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerNine</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+            <ItemOut quantity="1" lineNumber="20">
+                <ItemID>
+                    <SupplierPartID>SP018</SupplierPartID>
+                    <SupplierPartAuxiliaryID>SPA018</SupplierPartAuxiliaryID>
+                </ItemID>
+                <ItemDetail>
+                    <UnitPrice>29.99</UnitPrice>
+                    <Currency>USD</Currency>
+                    <Description>Building blocks set</Description>
+                    <UnitOfMeasure>EA</UnitOfMeasure>
+                    <Classification>Toys</Classification>
+                    <ManufacturerPartID>MPID018</ManufacturerPartID>
+                    <ManufacturerName>ManufacturerNine</ManufacturerName>
+                </ItemDetail>
+            </ItemOut>
+        </Catalog>
+    </Request>
+</cXML>
