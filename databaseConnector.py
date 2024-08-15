@@ -57,7 +57,7 @@ xml_pretty_str = minidom.parseString(xml_str).toprettyxml(indent="    ")
 # Print or save the pretty-printed XML
 print(xml_pretty_str)
 
-# Optionally, save to a file
+# Print to a file named output_xx.xml where the xx is the version of my print manually changed
 with open("output_03.xml", "w") as f:
     f.write(xml_pretty_str)
 
